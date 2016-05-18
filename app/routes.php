@@ -13,8 +13,10 @@
 
 Route::get('/', function()
 {
-	return View::make('layout.master');
+	return View::make('administrador.plato.agregar');
 });
-Route::any('administar/platos',  'PlatosController@administrarPlatos');
-Route::any('agregar/platos',  'PlatosController@registarPlato');
-Route::post('guardar/plato', 'PlatosController@guardarPlato');
+Route::any('agregar/plato', 'PlatosController@agregarPlato');
+Route::any('guardar/plato', 'PlatosController@guardarPlato');
+Route::any('administrar/plato', 'PlatosController@listarPlatos');
+
+Route::any('hola', 'HolaController@holac');

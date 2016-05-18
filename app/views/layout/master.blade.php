@@ -15,20 +15,11 @@
 {{ HTML::script('plantilla/js/jquery.cslider.js') }}
 {{ HTML::script('bootstrap/js/bootstrap.min.js')}}
 <!-- DATATABLE SCRIPSTS
-{{ HTML::style('datatables/datatables.min.css') }}
 {{ HTML::script('datatables/datatables.min.js') }}
+{{ HTML::style('datatables/datatables.min.css') }}
 {{ HTML::style('datatables/tables/css/dataTables.bootstrap.min.css') }}
 {{ HTML::style('datatables/tables/css/dataTables.bootstrap.css') }}-->
-<script type="text/javascript">
-			$(function() {
-
-				$('#da-slider').cslider({
-					autoplay : true,
-					bgincrement : 450
-				});
-
-			});
-		</script>
+@yield('scripts')
 	
 
 </head>
@@ -36,40 +27,39 @@
 <div class="wrap">
 	<div class="main"><!-- start main -->
 		<div class="grid1_of_1"><!-- start grid1_of_1 -->
-		<div class="menu"><!-- start menu -->
-			<ul class="mcd-menu">
-				<li>
-					<a href="">
-						<i class="icon1"></i>
-						<strong>shopping</strong>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<i class="icon2"></i>
-						<strong>calender</strong>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<i class="icon3"></i>
-						<strong>network</strong>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<i class="icon4"></i>
-						<strong>ecology</strong>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<i class="icon5"></i>
-						<strong>statistics</strong>
-					</a>
-				</li>
-			</ul>
-		</div><!-- end menu -->			
+		<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Platos <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a class="registrarPlato" href="#">Registar Plato</a></li>
+            <li><a href="{{url('administrar/plato')}}">Listar Plato</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 		<div class="grids_of_2"><!-- start grids_of_2 -->	
 @yield('cuerpo')<!--aqui todo el contenido del cuerpo-->
