@@ -68,7 +68,7 @@ return array(
 			'host'     => 'localhost',
 			'database' => 'bd_lfa',
 			'username' => 'postgres',
-			'password' => 'root',
+			'password' => 'Cuchufl1t0',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',

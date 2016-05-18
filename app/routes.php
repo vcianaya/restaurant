@@ -19,4 +19,5 @@ Route::any('agregar/plato', 'PlatosController@agregarPlato');
 Route::any('guardar/plato', 'PlatosController@guardarPlato');
 Route::any('administrar/plato', 'PlatosController@listarPlatos');
 
+Route::any('menu','MenuController@index');
 Route::any('hola', 'HolaController@holac');
